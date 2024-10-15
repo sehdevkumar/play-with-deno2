@@ -11,5 +11,10 @@ try {
     console.log(entry.name);
   }
 } catch (error) {
-  console.error("Error reading directory:", error);
+  console.error("Error reading directories:", error);
 }
+
+
+Deno.serve((_req)=> {
+   return new Response("something changes")
+})
